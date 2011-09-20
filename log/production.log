@@ -1,0 +1,401 @@
+
+
+Started GET "/admin" for 127.0.0.1 at 2011-09-20 14:40:58 -0700
+  Processing by Admin::DashboardController#index as HTML
+==========================
+Redirected to http://localhost:4000/accounts/signup
+Completed 302 Found in 214ms
+
+
+Started GET "/accounts/signup" for 127.0.0.1 at 2011-09-20 14:40:58 -0700
+  Processing by AccountsController#signup as HTML
+==========================
+Redirected to http://localhost:4000/setup
+Completed 302 Found in 12ms
+
+
+Started GET "/setup" for 127.0.0.1 at 2011-09-20 14:40:58 -0700
+  Processing by SetupController#index as HTML
+==========================
+Rendered setup/index.html.erb within layouts/accounts (7.8ms)
+==========================
+Completed 200 OK in 24ms (Views: 17.4ms | ActiveRecord: 9.9ms)
+
+
+Started POST "/setup" for 127.0.0.1 at 2011-09-20 14:41:07 -0700
+  Processing by SetupController#index as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XffESXxTKm68z6a5l2GsLuDOWDtEPp0Vylr7IWRQOqo=", "setting"=>{"blog_name"=>"StrongWaveTech", "email"=>"libocao@gmail.com"}}
+==========================
+Rendered notification_mailer/_mail_header.html.erb (0.6ms)
+Rendered notification_mailer/notif_user.html.erb (6.5ms)
+
+Sent mail to libocao@gmail.com (849ms)
+Redirected to http://localhost:4000/setup/confirm
+==========================
+Completed 302 Found in 2316ms
+
+
+Started GET "/setup/confirm" for 127.0.0.1 at 2011-09-20 14:41:09 -0700
+  Processing by SetupController#confirm as HTML
+==========================
+Rendered shared/_confirm.html.erb (6.1ms)
+Rendered setup/confirm.html.erb within layouts/accounts (12.3ms)
+==========================
+Completed 200 OK in 25ms (Views: 18.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2011-09-20 14:41:12 -0700
+  Processing by Admin::DashboardController#index as HTML
+==========================
+==========================
+Rendered admin/dashboard/_overview.html.erb (4.8ms)
+Rendered admin/dashboard/_welcome.html.erb (5.8ms)
+Rendered admin/dashboard/_inbound.html.erb (1.3ms)
+Rendered admin/dashboard/_comments.html.erb (2.2ms)
+Rendered admin/dashboard/_posts.html.erb (13.7ms)
+Rendered admin/dashboard/_popular.html.erb (1.0ms)
+Rendered admin/dashboard/index.html.erb within layouts/administration (80.1ms)
+==========================
+Completed 200 OK in 2156ms (Views: 93.8ms | ActiveRecord: 13.7ms)
+
+
+Started GET "/admin/resources" for 127.0.0.1 at 2011-09-20 14:41:20 -0700
+  Processing by Admin::ResourcesController#index as HTML
+==========================
+==========================
+Rendered admin/resources/_upload.html.erb (10.5ms)
+Rendered admin/resources/index.html.erb within layouts/administration (33.8ms)
+==========================
+Completed 200 OK in 78ms (Views: 42.7ms | ActiveRecord: 5.5ms)
+
+
+Started POST "/admin/resources/upload_status?upload_id=1" for 127.0.0.1 at 2011-09-20 14:41:34 -0700
+  Processing by Admin::ResourcesController#upload_status as JS
+  Parameters: {"authenticity_token"=>"XffESXxTKm68z6a5l2GsLuDOWDtEPp0Vylr7IWRQOqo=", "upload_id"=>"1", "id"=>nil}
+==========================
+==========================
+Rendered inline template (1.9ms)
+==========================
+Completed 200 OK in 80ms (Views: 2.7ms | ActiveRecord: 61.1ms)
+
+
+Started POST "/admin/resources/upload?upload_id=1" for 127.0.0.1 at 2011-09-20 14:41:34 -0700
+  Processing by Admin::ResourcesController#upload as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XffESXxTKm68z6a5l2GsLuDOWDtEPp0Vylr7IWRQOqo=", "upload"=>{"filename"=>#<ActionDispatch::Http::UploadedFile:0x0000001380fb48 @original_filename="arrow-3D-green-right.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"upload[filename]\"; filename=\"arrow-3D-green-right.jpg\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:/tmp/RackMultipart20110920-20215-4toxco>>}, "commit"=>"Upload", "upload_id"=>"1", "id"=>nil}
+==========================
+==========================
+Rendered inline template (2.0ms)
+==========================
+Completed 200 OK in 1216ms (Views: 3.6ms | ActiveRecord: 33.9ms)
+
+
+Started GET "/admin/content/new" for 127.0.0.1 at 2011-09-20 14:41:49 -0700
+  Processing by Admin::ContentController#new as HTML
+  Parameters: {"id"=>nil}
+==========================
+==========================
+==========================
+Rendered admin/content/_categories.html.erb (13.1ms)
+Rendered admin/content/_images.html.erb (2.6ms)
+Rendered admin/content/_attachment.html.erb (3.7ms)
+Rendered admin/content/_form.html.erb (52.7ms)
+Rendered admin/shared/_edit.html.erb (57.6ms)
+Rendered admin/content/new.html.erb within layouts/administration (177.6ms)
+==========================
+Completed 200 OK in 230ms (Views: 182.9ms | ActiveRecord: 6.8ms)
+
+
+Started GET "/admin/pages" for 127.0.0.1 at 2011-09-20 14:43:28 -0700
+  Processing by Admin::PagesController#index as HTML
+==========================
+==========================
+Rendered admin/pages/_pages.html.erb (48.7ms)
+Rendered admin/pages/index.html.erb within layouts/administration (171.6ms)
+==========================
+Completed 200 OK in 212ms (Views: 175.4ms | ActiveRecord: 6.2ms)
+
+
+Started GET "/admin/themes" for 127.0.0.1 at 2011-09-20 14:43:30 -0700
+  Processing by Admin::ThemesController#index as HTML
+==========================
+==========================
+Rendered admin/themes/index.html.erb within layouts/administration (21.9ms)
+==========================
+Completed 200 OK in 63ms (Views: 28.4ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/admin/themes/preview?skip_relative_url_root=true&theme=true-blue-3" for 127.0.0.1 at 2011-09-20 14:43:31 -0700
+  Processing by Admin::ThemesController#preview as HTML
+  Parameters: {"skip_relative_url_root"=>"true", "theme"=>"true-blue-3", "id"=>nil}
+==========================
+==========================
+Sent file /home/liboc/code-depot/workspace/typo-6.0.9-rails3010/themes/true-blue-3/preview.png (0.2ms)
+==========================
+Completed 200 OK in 292ms
+
+
+Started GET "/admin/themes/preview?skip_relative_url_root=true&theme=dirtylicious" for 127.0.0.1 at 2011-09-20 14:43:31 -0700
+  Processing by Admin::ThemesController#preview as HTML
+  Parameters: {"skip_relative_url_root"=>"true", "theme"=>"dirtylicious", "id"=>nil}
+==========================
+==========================
+Sent file /home/liboc/code-depot/workspace/typo-6.0.9-rails3010/themes/dirtylicious/preview.png (0.1ms)
+==========================
+Completed 200 OK in 49ms
+
+
+Started GET "/admin/themes/preview?skip_relative_url_root=true&theme=standard_issue" for 127.0.0.1 at 2011-09-20 14:43:31 -0700
+  Processing by Admin::ThemesController#preview as HTML
+  Parameters: {"skip_relative_url_root"=>"true", "theme"=>"standard_issue", "id"=>nil}
+==========================
+==========================
+Sent file /home/liboc/code-depot/workspace/typo-6.0.9-rails3010/themes/standard_issue/preview.png (0.1ms)
+==========================
+Completed 200 OK in 34ms
+
+
+Started GET "/admin/themes/preview?skip_relative_url_root=true&theme=true-red" for 127.0.0.1 at 2011-09-20 14:43:31 -0700
+  Processing by Admin::ThemesController#preview as HTML
+  Parameters: {"skip_relative_url_root"=>"true", "theme"=>"true-red", "id"=>nil}
+==========================
+==========================
+Sent file /home/liboc/code-depot/workspace/typo-6.0.9-rails3010/themes/true-red/preview.png (0.1ms)
+==========================
+Completed 200 OK in 27ms
+
+
+Started GET "/admin/themes/preview?skip_relative_url_root=true&theme=scribbish" for 127.0.0.1 at 2011-09-20 14:43:31 -0700
+  Processing by Admin::ThemesController#preview as HTML
+  Parameters: {"skip_relative_url_root"=>"true", "theme"=>"scribbish", "id"=>nil}
+==========================
+==========================
+Sent file /home/liboc/code-depot/workspace/typo-6.0.9-rails3010/themes/scribbish/preview.png (0.1ms)
+==========================
+Completed 200 OK in 42ms
+
+
+Started GET "/admin/themes/preview?skip_relative_url_root=true&theme=typographic" for 127.0.0.1 at 2011-09-20 14:43:31 -0700
+  Processing by Admin::ThemesController#preview as HTML
+  Parameters: {"skip_relative_url_root"=>"true", "theme"=>"typographic", "id"=>nil}
+==========================
+==========================
+Sent file /home/liboc/code-depot/workspace/typo-6.0.9-rails3010/themes/typographic/preview.png (1.1ms)
+==========================
+Completed 200 OK in 35ms
+
+
+Started GET "/admin/sidebar" for 127.0.0.1 at 2011-09-20 14:43:38 -0700
+  Processing by Admin::SidebarController#index as HTML
+==========================
+==========================
+-----------------------------------
+[#<PageSidebar id: 1, active_position: 0, config: {"maximum_pages"=>"10"}, staged_position: 0, type: "PageSidebar">, #<CategorySidebar id: 2, active_position: 1, config: {"empty"=>false, "count"=>true}, staged_position: 1, type: "CategorySidebar">, #<ArchivesSidebar id: 3, active_position: 2, config: {"show_count"=>true, "count"=>"10"}, staged_position: 2, type: "ArchivesSidebar">, #<StaticSidebar id: 4, active_position: 3, config: {"body"=>"<ul>\n  <li><a href=\"http://www.typosphere.org\" title=\"Typo\">Typosphere</a></li>\n  <li><a href=\"http://typogarden.org\">Typogarden</a></li>\n  <li><a href=\"http://t37.net\" title=\"Blog ExpÃ©rience utilisateur\">FrÃ©dÃ©ric</a></li>\n  <li><a href=\"http://www.matijs.net/\" title=\"Matijs\">Matijs</a></li>\n<li><a href=\"http://elsif.fr\" title=\"Yannick\">Yannick</a></li>\n<li><a href=\"http://blog.ookook.fr\" title=\"Thomas\">Thomas</a></li>\n<li><a href=\"http://blog.shingara.fr\" title=\"Cyril\">Cyril</a></li>\n\n</ul>\n", "title"=>"Links"}, staged_position: 3, type: "StaticSidebar">, #<MetaSidebar id: 5, active_position: 4, config: {"title"=>"Meta"}, staged_position: 4, type: "MetaSidebar">]
+-----------------------------------
+Rendered admin/sidebar/_available.html.erb (6.4ms)
+Rendered admin/sidebar/_active.html.erb (17.4ms)
+Rendered admin/sidebar/index.html.erb within layouts/administration (52.9ms)
+==========================
+Completed 200 OK in 160ms (Views: 63.4ms | ActiveRecord: 8.2ms)
+
+
+Started POST "/admin/sidebar/set_active" for 127.0.0.1 at 2011-09-20 14:44:58 -0700
+  Processing by Admin::SidebarController#set_active as JS
+  Parameters: {"active"=>["amazon", "page-1", "category-2", "archives-3", "static-4", "meta-5"], "authenticity_token"=>"XffESXxTKm68z6a5l2GsLuDOWDtEPp0Vylr7IWRQOqo=", "id"=>nil}
+==========================
+==========================
+Rendered admin/sidebar/_active.html.erb (11.3ms)
+Rendered admin/sidebar/_available.html.erb (1.7ms)
+Rendered admin/sidebar/set_active.rjs (29.2ms)
+==========================
+Completed 200 OK in 237ms (Views: 119.1ms | ActiveRecord: 16.0ms)
+
+
+Started POST "/admin/sidebar/remove/6?element=active_amazon-6" for 127.0.0.1 at 2011-09-20 14:45:02 -0700
+  Processing by Admin::SidebarController#remove as JS
+  Parameters: {"authenticity_token"=>"XffESXxTKm68z6a5l2GsLuDOWDtEPp0Vylr7IWRQOqo=", "element"=>"active_amazon-6", "id"=>"6"}
+==========================
+==========================
+Rendered admin/sidebar/remove.rjs (1.7ms)
+==========================
+Completed 200 OK in 122ms (Views: 18.0ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/admin/settings" for 127.0.0.1 at 2011-09-20 14:50:17 -0700
+  Processing by Admin::SettingsController#index as HTML
+==========================
+==========================
+Rendered admin/settings/index.html.erb within layouts/administration (30.0ms)
+==========================
+Completed 200 OK in 61ms (Views: 36.4ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/admin/content" for 127.0.0.1 at 2011-09-20 14:50:29 -0700
+  Processing by Admin::ContentController#index as HTML
+==========================
+==========================
+Rendered admin/content/_article_list.html.erb (22.8ms)
+Rendered admin/content/index.html.erb within layouts/administration (58.0ms)
+==========================
+Completed 200 OK in 89ms (Views: 59.4ms | ActiveRecord: 9.7ms)
+
+
+Started GET "/admin/tags" for 127.0.0.1 at 2011-09-20 14:50:42 -0700
+  Processing by Admin::TagsController#index as HTML
+==========================
+==========================
+Rendered admin/tags/index.html.erb within layouts/administration (25.9ms)
+==========================
+Completed 200 OK in 60ms (Views: 33.6ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2011-09-20 14:51:36 -0700
+  Processing by Admin::DashboardController#index as HTML
+==========================
+==========================
+Rendered admin/dashboard/_overview.html.erb (3.8ms)
+Rendered admin/dashboard/_welcome.html.erb (2.5ms)
+Rendered admin/dashboard/_inbound.html.erb (1.1ms)
+Rendered admin/dashboard/_comments.html.erb (0.1ms)
+Rendered admin/dashboard/_posts.html.erb (5.9ms)
+Rendered admin/dashboard/_popular.html.erb (0.1ms)
+Rendered admin/dashboard/index.html.erb within layouts/administration (36.4ms)
+==========================
+Completed 200 OK in 2330ms (Views: 43.4ms | ActiveRecord: 10.8ms)
+
+
+Started GET "/admin/themes" for 127.0.0.1 at 2011-09-20 14:51:57 -0700
+  Processing by Admin::ThemesController#index as HTML
+==========================
+==========================
+Rendered admin/themes/index.html.erb within layouts/administration (18.3ms)
+==========================
+Completed 200 OK in 137ms (Views: 109.2ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/admin/themes/preview?skip_relative_url_root=true&theme=true-blue-3" for 127.0.0.1 at 2011-09-20 14:51:58 -0700
+  Processing by Admin::ThemesController#preview as HTML
+  Parameters: {"skip_relative_url_root"=>"true", "theme"=>"true-blue-3", "id"=>nil}
+==========================
+==========================
+Sent file /home/liboc/code-depot/workspace/typo-6.0.9-rails3010/themes/true-blue-3/preview.png (1.2ms)
+==========================
+Completed 200 OK in 370ms
+
+
+Started GET "/admin/themes/preview?skip_relative_url_root=true&theme=dirtylicious" for 127.0.0.1 at 2011-09-20 14:51:58 -0700
+  Processing by Admin::ThemesController#preview as HTML
+  Parameters: {"skip_relative_url_root"=>"true", "theme"=>"dirtylicious", "id"=>nil}
+==========================
+==========================
+Sent file /home/liboc/code-depot/workspace/typo-6.0.9-rails3010/themes/dirtylicious/preview.png (0.1ms)
+==========================
+Completed 200 OK in 273ms
+
+
+Started GET "/admin/themes/preview?skip_relative_url_root=true&theme=true-red" for 127.0.0.1 at 2011-09-20 14:51:58 -0700
+  Processing by Admin::ThemesController#preview as HTML
+  Parameters: {"skip_relative_url_root"=>"true", "theme"=>"true-red", "id"=>nil}
+==========================
+==========================
+Sent file /home/liboc/code-depot/workspace/typo-6.0.9-rails3010/themes/true-red/preview.png (0.1ms)
+==========================
+Completed 200 OK in 60ms
+
+
+Started GET "/admin/themes/preview?skip_relative_url_root=true&theme=typographic" for 127.0.0.1 at 2011-09-20 14:51:58 -0700
+  Processing by Admin::ThemesController#preview as HTML
+  Parameters: {"skip_relative_url_root"=>"true", "theme"=>"typographic", "id"=>nil}
+==========================
+==========================
+Sent file /home/liboc/code-depot/workspace/typo-6.0.9-rails3010/themes/typographic/preview.png (0.1ms)
+==========================
+Completed 200 OK in 239ms
+
+
+Started GET "/admin/themes/preview?skip_relative_url_root=true&theme=scribbish" for 127.0.0.1 at 2011-09-20 14:51:58 -0700
+  Processing by Admin::ThemesController#preview as HTML
+  Parameters: {"skip_relative_url_root"=>"true", "theme"=>"scribbish", "id"=>nil}
+==========================
+==========================
+Sent file /home/liboc/code-depot/workspace/typo-6.0.9-rails3010/themes/scribbish/preview.png (0.1ms)
+==========================
+Completed 200 OK in 273ms
+
+
+Started GET "/admin/themes/preview?skip_relative_url_root=true&theme=standard_issue" for 127.0.0.1 at 2011-09-20 14:51:58 -0700
+  Processing by Admin::ThemesController#preview as HTML
+  Parameters: {"skip_relative_url_root"=>"true", "theme"=>"standard_issue", "id"=>nil}
+==========================
+==========================
+Sent file /home/liboc/code-depot/workspace/typo-6.0.9-rails3010/themes/standard_issue/preview.png (0.1ms)
+==========================
+Completed 200 OK in 114ms
+
+
+Started GET "/admin/themes" for 127.0.0.1 at 2011-09-20 14:54:10 -0700
+  Processing by Admin::ThemesController#index as HTML
+==========================
+==========================
+Rendered admin/themes/index.html.erb within layouts/administration (24.0ms)
+==========================
+Completed 200 OK in 69ms (Views: 29.6ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/admin/themes/preview?skip_relative_url_root=true&theme=standard_issue" for 127.0.0.1 at 2011-09-20 14:54:11 -0700
+  Processing by Admin::ThemesController#preview as HTML
+  Parameters: {"skip_relative_url_root"=>"true", "theme"=>"standard_issue", "id"=>nil}
+==========================
+==========================
+Sent file /home/liboc/code-depot/workspace/typo-6.0.9-rails3010/themes/standard_issue/preview.png (0.2ms)
+==========================
+Completed 200 OK in 38ms
+
+
+Started GET "/admin/themes/preview?skip_relative_url_root=true&theme=typographic" for 127.0.0.1 at 2011-09-20 14:54:11 -0700
+  Processing by Admin::ThemesController#preview as HTML
+  Parameters: {"skip_relative_url_root"=>"true", "theme"=>"typographic", "id"=>nil}
+==========================
+==========================
+Sent file /home/liboc/code-depot/workspace/typo-6.0.9-rails3010/themes/typographic/preview.png (4.7ms)
+==========================
+Completed 200 OK in 32ms
+
+
+Started GET "/admin/themes/preview?skip_relative_url_root=true&theme=scribbish" for 127.0.0.1 at 2011-09-20 14:54:12 -0700
+  Processing by Admin::ThemesController#preview as HTML
+  Parameters: {"skip_relative_url_root"=>"true", "theme"=>"scribbish", "id"=>nil}
+==========================
+==========================
+Sent file /home/liboc/code-depot/workspace/typo-6.0.9-rails3010/themes/scribbish/preview.png (0.1ms)
+==========================
+Completed 200 OK in 242ms
+
+
+Started GET "/admin/themes/preview?skip_relative_url_root=true&theme=true-blue-3" for 127.0.0.1 at 2011-09-20 14:54:12 -0700
+  Processing by Admin::ThemesController#preview as HTML
+  Parameters: {"skip_relative_url_root"=>"true", "theme"=>"true-blue-3", "id"=>nil}
+==========================
+==========================
+Sent file /home/liboc/code-depot/workspace/typo-6.0.9-rails3010/themes/true-blue-3/preview.png (0.2ms)
+==========================
+Completed 200 OK in 22ms
+
+
+Started GET "/admin/themes/preview?skip_relative_url_root=true&theme=dirtylicious" for 127.0.0.1 at 2011-09-20 14:54:12 -0700
+  Processing by Admin::ThemesController#preview as HTML
+  Parameters: {"skip_relative_url_root"=>"true", "theme"=>"dirtylicious", "id"=>nil}
+==========================
+==========================
+Sent file /home/liboc/code-depot/workspace/typo-6.0.9-rails3010/themes/dirtylicious/preview.png (0.1ms)
+==========================
+Completed 200 OK in 21ms
+
+
+Started GET "/admin/themes/preview?skip_relative_url_root=true&theme=true-red" for 127.0.0.1 at 2011-09-20 14:54:12 -0700
+  Processing by Admin::ThemesController#preview as HTML
+  Parameters: {"skip_relative_url_root"=>"true", "theme"=>"true-red", "id"=>nil}
+==========================
+==========================
+Sent file /home/liboc/code-depot/workspace/typo-6.0.9-rails3010/themes/true-red/preview.png (0.1ms)
+==========================
+Completed 200 OK in 13ms
