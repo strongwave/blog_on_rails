@@ -47,6 +47,7 @@ gem 'acts_as_list'
 gem 'acts_as_tree_rails3'
 gem 'recaptcha', :require => 'recaptcha/rails', :branch => 'rails3'
 gem 'passenger'
+gem 'capistrano'
 
 group :development, :test do
   if RUBY_VERSION.include?('1.9')
