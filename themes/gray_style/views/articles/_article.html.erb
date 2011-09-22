@@ -1,0 +1,30 @@
+<div class='post category-excerpt <%= "border" if @article_counter >= 0 %>' id="article-<%= article.id %>">
+  <div class='post-title'>
+   <div class="title">
+        <h2 class="posttitle">
+          <%= (controller.controller_name == 'redirect') ? article.title : link_to_permalink(article,article.title) %>
+        </h2>
+        <div class="postdata fix">
+            <span class="comments">
+                <span class="icon">&nbsp;</span>
+                <%= display_comments_counter(article) %>
+            </span>
+        </div>
+    </div>
+    <div class="date">
+    	<span class="month"><%= article.published_at.strftime('%b')%></span>
+		<span class="day"><%= article.published_at.strftime('%d')%></span>
+		<span class="year"><%= article.published_at.strftime('%Y')%></span></div>
+  </div>
+  <div class='post-entry'>
+    <%= render 'articles/protected_article_content', { :article => article } %>
+  </div>
+  <div class='post-footer'>
+    <div class='author'>
+    	<%= "posted by #{article.user.login} at #{article.published_at.strftime('%I:%M %P')}" %>
+    </div>
+  </div>
+
+</div>
+
+<% @article_counter+=1 %>

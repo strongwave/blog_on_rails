@@ -12,6 +12,20 @@ module SidebarHelper
         ")
     end
   end
+  
+  def render_sidebars_with_div(*sidebars)
+    begin
+      sidebarlist = (sidebars.blank? ? Sidebar.find(:all, :order => 'active_position ASC') : sidebars).map do |sb|
+        @sidebar = sb
+        sb.parse_request(content_array, params)
+        "<div id='#{sb.short_name}_sidebar' class='dbx-box suf-widget'>"+render_sidebar(sb)+"</div>"
+      end.join
+    rescue => e
+      logger.error e
+      _("It seems something went wrong. Maybe some of your sidebars are actually missing and you should either reinstall them or remove them manually
+        ")
+    end
+  end
 
   def render_sidebar(sidebar)
     if sidebar.view_root
