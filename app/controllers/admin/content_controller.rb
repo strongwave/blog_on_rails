@@ -57,9 +57,10 @@ class Admin::ContentController < Admin::BaseController
   end
 
   def insert_editor
-    editor = (params[:editor].to_s =~ /simple|visual/) ? params[:editor].to_s : "visual"
-    current_user.editor = editor
-    current_user.save!
+    # --this following line overwrite db user table editor setting, cause crash if use full feature of CK
+    #editor = (params[:editor].to_s =~ /simple|visual/) ? params[:editor].to_s : "visual"
+    #current_user.editor = editor
+    #current_user.save!
 
     render :partial => "#{params[:editor].to_s}_editor"
   end
