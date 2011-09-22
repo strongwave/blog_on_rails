@@ -83,6 +83,7 @@ a {
 #menu li {
   list-style: none;
   float: left;
+  -moz-border-radius: 3px 3px 3px 3px;
 }
 
 #menu a {
@@ -299,7 +300,7 @@ h2.posttitle a:hover {
 }
 
 #sidebar a {
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 #sidebar a:hover {
@@ -313,7 +314,6 @@ h2.posttitle a:hover {
 }
 
 #sidebar .dbx-box h3{
-    color: #444444;
     font: bold 110%/100% Arial,Helvetica,sans-serif;
 	-moz-border-radius-topleft: 3px;
     -moz-border-radius-topright: 3px;
@@ -321,6 +321,8 @@ h2.posttitle a:hover {
     margin: 0;
     padding: 8px 24px 7px 10px;
     position: relative;
+    background-color: #444444;
+    color: #FFFFFF;
 }
 
 #sidebar .dbx-box div{
