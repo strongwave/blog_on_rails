@@ -1,6 +1,6 @@
 h1. Introduction
 
-This is a blog engine using Typo 3.0.6 and rails 3.0.10
+This is a blog engine using Typo 3.0.6/ruby1.9.2/rails 3.0.10
 
 It basically takes Typo 3.0.6 and strip down some of the vendor related stuff
 to make a light weighted personal blog
