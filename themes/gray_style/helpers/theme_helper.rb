@@ -73,7 +73,8 @@ def display_comments_counter(article)
   link_to pluralize(article.published_comments.size,
           _('%d comments', article.published_comments.size),
           _('%d comment', article.published_comments.size),
-          _('%d comments', article.published_comments.size)), article.permalink_url
+          _('%d comments', article.published_comments.size)), article.permalink_url+"#commentaires"
+   #commentaires anchor defind in ../views/read.html/erb 21 line <h3 class="feedback" id="commentaires">
 end
 
 def show_pages_links
