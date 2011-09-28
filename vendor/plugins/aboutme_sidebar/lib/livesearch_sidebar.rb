@@ -1,5 +1,5 @@
-class LivesearchSidebar < Sidebar
-  description "Adds livesearch to your Typo blog"
+class AboutmeSidebar < Sidebar
+  description "Adds About Me to your Typo blog"
 
-  setting :title, 'Search'
+  setting :title, 'About Me'
 end

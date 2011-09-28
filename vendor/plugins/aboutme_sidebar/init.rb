@@ -1,2 +1,2 @@
 require 'sidebar'
-require 'livesearch_sidebar'
+require 'aboutme_sidebar'
