@@ -92,7 +92,7 @@ a {
 }
 
 #menu a:hover, #menu a.active {
-  background: #023;
+  background: grey;
   color: #fff;
 }
 
@@ -311,7 +311,8 @@ h2.posttitle a:hover {
 }
 
 #sidebar .dbx-box h3{
-  color: #444444;
+  color: white;
+  background-color: grey;
   font: bold 110%/100% Arial,Helvetica,sans-serif;
   -moz-border-radius-topleft: 3px;
   -moz-border-radius-topright: 3px;
