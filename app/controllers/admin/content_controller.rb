@@ -161,7 +161,7 @@ class Admin::ContentController < Admin::BaseController
       end
     end
 
-    #@macros = TextFilter.available_filters.select { |filter| TextFilterPlugin::Macro > filter }
+    @macros = TextFilter.available_filters.select { |filter| TextFilterPlugin::Macro > filter }
     @article.published = true
 
     @resources = Resource.find(:all, :conditions => "mime NOT LIKE '%image%'", :order => 'filename')
