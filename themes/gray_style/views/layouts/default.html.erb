@@ -5,7 +5,9 @@
   <%= stylesheet_link_tag "/stylesheets/theme/style", :media => 'all' %>
   <%= stylesheet_link_tag "/stylesheets/theme/rounded-corners", :media => 'all' %>
   <%= page_header %>
-  <script type="text/javascript">var switchTo5x=true;</script><script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script><script type="text/javascript">stLight.options({publisher:'f6a0b5cc-f7c5-46a1-b5fb-cf296d4d060f'});</script>
+  <script type="text/javascript">var switchTo5x=false;</script>
+  <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+  <script type="text/javascript">stLight.options({publisher:'f6a0b5cc-f7c5-46a1-b5fb-cf296d4d060f'});</script>
 </head>
 <body>
   <div id='container'>
@@ -40,7 +42,7 @@
     <%= content_tag(:li, link_to(_('Articles'), {:controller => 'categories'}, {:class => render_active_articles}))%>
     <%= show_pages_links %>
   </ul>
-  <div id="breadcrumb">
+  <div id="breadcrumb" class='float_top'>
     <%= render_breadcrumb %>
   </div>
 </body>

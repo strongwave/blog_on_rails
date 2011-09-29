@@ -1,5 +1,11 @@
 <div class="article" id="article-<%= @article.id %>">
   <h1><%= link_to_permalink(@article,@article.title) %></h1>
+  <div align="right">
+    <span  class='st_twitter_hcount' displayText='Tweet'></span>
+    <span  class='st_facebook_hcount' displayText='Facebook'></span>
+    <span  class='st_linkedin_hcount' displayText='LinkedIn'></span>
+    <span  class='st_plusone_hcount' ></span>
+  </div>
   <%= @article.html(:body) %>
   <%= @article.html(:extended) %>
 

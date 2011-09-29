@@ -102,15 +102,17 @@ a {
   height: 50px;
 }
 
-#breadcrumb {
+.float_top {
   position: absolute;
-  top: 120px;
-  left: 50%;
-  margin-left: -495px;
+  top: 85px;
   color: #787878;
   padding-top: 5px;
   overflow: hidden;
-  width: 980px;
+  width: 100%;
+}
+
+#breadcrumb {
+  top: 92px;
 }
 
 #breadcrumb a {
@@ -124,7 +126,7 @@ a {
 #page {
 border-top: 1px solid #c0c0c0;
   margin-top: 24px;
-  padding-top: 25px;
+  padding-top: 10px;
 }
 
 #content {
