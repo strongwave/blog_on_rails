@@ -1,3 +1,11 @@
+/*
+Author: Libo Cao Meyers
+Date: 10/04/2011
+Description: A javascript function that tests all modernizr supported html5/css3
+             features for current browser. Alert will tell user the supported
+             and non-supported feature for current browser. It contains a good
+             list of html5 tags as well. 
+*/
 function testBrowserHtml5Support(){
 	
 	var browser_tests = [//html5 features
@@ -25,7 +33,7 @@ function testBrowserHtml5Support(){
   //Modernizr.hasEvent('eventname', elem)
 	var yArry=[], nArry=[];
 	
-	for (t in browser_tests) {   
+	for (var t=0; t< browser_tests.length; t++) {   
 		if (eval("Modernizr." + browser_tests[t])) {
 			yArry.push(browser_tests[t]);
 		}
