@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      html { height: 100% }
+      body { height: 100%; margin: 0; padding: 0 }
+      #googleMap {width: 300px; height: 400px; border: 1px solid #9C9898;}
+    </style>
+
+    <script src="http://code.jquery.com/jquery-1.4.2.min.js"></script>
+    <script>
+        jQuery(window).ready(function(){
+          jQuery("#findLocationBtn").click(initiate_geolocation);
+        });
+        
+        function initiate_geolocation() {
+            navigator.geolocation.getCurrentPosition(handle_geolocation_query,handle_errors);
+        }
+
+        function handle_errors(error)
+        {
+            switch(error.code)
+            {
+                case error.PERMISSION_DENIED: alert("user did not share geolocation data");
+                break;
+
+                case error.POSITION_UNAVAILABLE: alert("could not detect current position");
+                break;
+
+                case error.TIMEOUT: alert("retrieving position timed out");
+                break;
+
+                default: alert("unknown error");
+                break;
+            }
+        }
+        function handle_geolocation_query(position)
+        {
+            var google_tile = "http://maps.google.com/maps/api/staticmap?sensor=false&center=" + position.coords.latitude + "," +
+                            position.coords.longitude + "&zoom=14&size=300x400&markers=color:blue|label:S|" +
+                            position.coords.latitude + ',' + position.coords.longitude;
+            //alert(google_tile);
+            jQuery("#googleMap").remove();
+            jQuery(document.body).append(
+                jQuery(document.createElement("img")).attr("src", google_tile).attr('id','googleMap')
+            );
+            //loadCanvas(google_tile);
+        }
+    </script>
+  </head>
+  <body>
+      <div>
+        <button id="findLocationBtn" >Draw My Location on Google Map</button>
+      </div>
+      <div id="googleMap"></div>
+  </body>
+</html>
