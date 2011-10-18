@@ -58,7 +58,6 @@
           var image_url = "http://maps.google.com/maps/api/staticmap?sensor=false&center=" + position.coords.latitude + ',' + position.coords.longitude +
                           "&zoom=14&size=300x400&markers=color:blue|label:S|" + position.coords.latitude + ',' + position.coords.longitude;
           
-          jQuery("#APIReturnValues").remove();
           jQuery("#googleMap").html(
               jQuery(document.createElement("img")).attr("src", image_url)
           );
@@ -71,7 +70,7 @@
       <button id="stopWatchBtn" >Stop Watch Position</button>
     </div>
     <div id="APIReturnValues"></div>
-    <div id="googleMap" style=" padding:1px; border:1px solid; height:400px; width:300px">
+    <div id="googleMap" style=" padding:1px; border:1px solid; height:400px; width:300px;">
     </div>
   </body>
 </html>
