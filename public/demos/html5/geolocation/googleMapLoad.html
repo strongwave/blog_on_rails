@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+<meta name="viewport" charset="utf-8"/>
+<style type="text/css">
   html { height: 100% }
-  body { height: 100%; margin: 0; padding: 0; }
-  #map_canvas { height: 50% ;border: solid;}
+  body { height: 100%; margin: 5px; padding: 20px }
 </style>
 <script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
-<script src="http://code.jquery.com/jquery-1.4.2.min.js"></script>
 <script>
   function initialize() {
     var latlng = new google.maps.LatLng(-34.397, 150.644);
@@ -16,12 +15,13 @@
       center: latlng,
       mapTypeId: google.maps.MapTypeId.ROADMAP
     };
-    var map = new google.maps.Map(document.getElementById("map_canvas"),myOptions);
+    var map = new google.maps.Map(document.getElementById("map_canvas"),
+        myOptions);
   }
 
 </script>
 </head>
 <body onload="initialize()">
-  <div id="map_canvas" style="width:50%; height:50%"></div>
+  <div id="map_canvas" style="width:80%; height:80%; border:1px solid"></div>
 </body>
 </html>

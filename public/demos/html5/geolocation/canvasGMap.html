@@ -1,18 +1,8 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
     <head>
-        <style>
-            body {
-                margin: 0px;
-                padding: 0px;
-            }
-            
-            #myCanvas {
-                border: 1px solid #9C9898;
-            }
-        </style>
         <script>
-            function loadCanvas(dataURL){
+            function loadCanvas(){
                 var canvas = document.getElementById("myCanvas");
                 var context = canvas.getContext("2d");
                 
@@ -22,27 +12,17 @@
                     context.drawImage(this, 0, 0);
                 };
                 
-                imageObj.src = dataURL;
+                imageObj.src = "http://maps.google.com/maps/api/staticmap?sensor=false&center=37.354107,-121.955235&zoom=14&size=800x600&markers=color:blue|label:S|37.354107,-121.955235";
             }
-            
-            window.onload = function(){
-                // make ajax call to get image data url
-                var request = new XMLHttpRequest();
-                request.open("GET", "http://maps.google.com/maps/api/staticmap?sensor=false&center=37.354107,-121.955235&zoom=14&size=300x400&markers=color:blue|label:S|37.354107,-121.955235", true);
-                request.onreadystatechange = function(){
-                    if (request.readyState == 4) { // Makes sure the document is ready to parse.
-                        if (request.status == 200) { // Makes sure it's found the file.
-                            loadCanvas(request.responseText);
-                        }
-                    }
-                };
-                request.send(null);
-            };
         </script>
     </head>
     <body>
-        <canvas id="myCanvas" width="300" height="400">
+        <div>
+            <button onclick="loadCanvas()">Draw My Location on Canvas Map</button>
+        </div>
+        <div>
+        <canvas id="myCanvas" style="height:600px; width:800px; border:1px solid grey;">
         </canvas>
-
+        </div>
     </body>
 </html>
