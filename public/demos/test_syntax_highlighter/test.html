@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <javascript type="text/javascript" src="http://localhost/demos/test_syntax_highlighter/shCore.js"> </javascript>
+  <javascript type="text/javascript" src="http://localhost/demos/test_syntax_highlighter/shBrushJScript.js"> </javascript>
+  <link href="shCore.css" media="all" rel="stylesheet" type="text/css" />
+  <link href="shThemeDefault.css" media="all" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    testing some code below
+		 <pre  class="brush: js">
+			 /**
+				* SyntaxHighlighter
+				*/
+			 function foo()
+			 {
+					 if (counter <= 10)
+							 return;
+					 // it works!
+			 }
+		 </pre>
+		 <!-- Finally, to actually run the highlighter, you need to include this JS on your page -->
+		 <script type="text/javascript">
+					SyntaxHighlighter.all()
+		 </script>
+  </body>
+</html>
